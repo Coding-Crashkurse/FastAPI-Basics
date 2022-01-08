@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1b05ee1-727b-4270-a638-7c568fe0551e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Java/src/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Java/src/Hello.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VueJSTodoApp/todoapp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../decorator/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../decoratorsyt/decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/schemas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
