@@ -1,6 +1,8 @@
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, Depends, HTTPException, status
 from enum import Enum
+from jose import jwt
 from pydantic import BaseModel, Field
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from typing import Optional
 
 
@@ -30,8 +32,24 @@ items = [
 
 
 app = FastAPI()
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
-@app.get("/items/")
+
+@app.post("/login")
+async def login(data: OAuth2PasswordRequestForm = Depends()):
+    if data.username == "test" and data.password == "test":
+        access_token = jwt.encode({"user": data.username}, key="secret")
+        return {"access_token": access_token, "token_type": "bearer"}
+    raise HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Incorrect username or password",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+
+
+#@app.get("/items/")
+@app.get("/items/", dependencies=[Depends(oauth2_scheme)])
+#async def get_user(q: Optional[str] = None, token: ):
 async def get_user(q: Optional[str] = None):
     if q:
         data = []
