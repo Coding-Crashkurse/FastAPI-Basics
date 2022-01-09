@@ -47,10 +47,10 @@ async def login(data: OAuth2PasswordRequestForm = Depends()):
     )
 
 
-#@app.get("/items/")
-@app.get("/items/", dependencies=[Depends(oauth2_scheme)])
-#async def get_user(q: Optional[str] = None, token: ):
-async def get_user(q: Optional[str] = None):
+@app.get("/items/")
+#@app.get("/items/", dependencies=[Depends(oauth2_scheme)])
+async def get_user(q: Optional[str] = None, token: str = Depends(oauth2_scheme)):
+#async def get_user(q: Optional[str] = None):
     if q:
         data = []
         for item in items:
